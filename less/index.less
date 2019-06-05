@@ -61,9 +61,11 @@ html, body {
 @second: #f77f4c;
 @third:#662d4e;
 
+// General Styling
 
 html {
 	box-sizing: border-box;
+	font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
 	font-size: 62.5%; 
   }
   
@@ -76,8 +78,13 @@ html {
   }
 
   h1 {
-	font-size: 4rem;
+	font-size: 3.6rem;
 	
+  }
+
+  p {
+	  font-family: 'Raleway', "Helvetica Neue", Arial, sans-serif;
+	  font-size: 1.6rem;
   }
   
 .container {
@@ -125,12 +132,46 @@ main {
 
 // header styling
 
-.banner{
+.banner {
 	background-image: url("/images/teal-banner.png");
 	background-position: 0% 0%;
 	background-repeat:no-repeat;
 	background-size:cover;
-	height: 400px;
+	height: 550px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	.header-img{
+		display: flex;
+		justify-content: center;
+		
+	
+		img {
+			// margin-top: 90px;
+			width: 20%;
+			height: 100%;
+			border: 5px solid @second;
+			border-radius: 50%;
+		}
+
+	}
+	
+	.header-info {
+		margin-top: 20px;
+		text-align: center;
+		width: 1000px;
+
+		h1 {
+			font-size: 50px;
+		}
+
+		h3{
+			margin: 20px 0;
+			font-size: 32px;
+		}
+	}
 }
 
 
