@@ -57,9 +57,28 @@ html, body {
     height: 100%;
 }
 
+// variables:
+
 @primary:#02c2ae;
 @second: #f77f4c;
 @third:#662d4e;
+@shadow: 1px 3px 8px 1px rgba(0,0,0,0.75);
+
+// Mixins
+
+.shadow{
+	 -webkit-box-shadow: @shadow;
+		-moz-box-shadow: @shadow;
+		-ms-box-shadow: @shadow;
+		 -o-box-shadow: @shadow;
+	        box-shadow: @shadow;
+}
+
+.transitions{
+
+}
+
+
 
 // General Styling
 
@@ -86,6 +105,15 @@ html {
 	  font-family: 'Raleway', "Helvetica Neue", Arial, sans-serif;
 	  font-size: 1.6rem;
   }
+
+  .button-style{
+	  background:@second;
+	  border: none;
+	  border-radius: 5px;
+	  width: 140px;
+	  height: 40px;
+	  .shadow();
+  }
   
 .container {
 	margin: 0 auto;
@@ -108,7 +136,6 @@ nav {
 	.nav-list{
 		display: flex;
 		justify-content: space-around;
-		// align-content: center;
 		align-items: center;
 
 		li{
@@ -149,7 +176,6 @@ main {
 		
 	
 		img {
-			// margin-top: 90px;
 			width: 20%;
 			height: 100%;
 			border: 5px solid @second;
@@ -170,6 +196,14 @@ main {
 		h3{
 			margin: 20px 0;
 			font-size: 32px;
+		}
+	}
+	.header-buttons {
+		display: flex;
+		justify-content: center;
+
+		button{
+			margin: 10px;
 		}
 	}
 }
