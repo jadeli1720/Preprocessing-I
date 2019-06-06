@@ -156,6 +156,7 @@ body {
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 html {
   box-sizing: border-box;
@@ -182,11 +183,8 @@ p {
   font-size: 1.6rem;
   line-height: 26px;
 }
-section {
-  margin-top: 60px;
-}
 .card {
-  margin: 10px;
+  margin: 40px 0 80px;
   padding: 40px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
@@ -199,7 +197,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 0 50px;
+  margin-top: 140px;
 }
 .button-style {
   background: #f77f4c;
@@ -246,6 +244,10 @@ nav .nav-list li a {
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+nav .nav-list li a:hover {
+  color: white;
 }
 main {
   margin-top: 100px;
@@ -318,4 +320,64 @@ main {
 }
 .skill-row .skill-column {
   width: 48%;
+  margin: 20px 0;
+}
+.skill-row .skill-column .skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #02c2ae;
+  margin-bottom: 15px;
+}
+.skill-row .skill-column .skill-header p {
+  font-size: 2.4rem;
+}
+.skill-row .skill-column .progress {
+  position: relative;
+  height: 12px;
+  display: block;
+  width: 100%;
+  background-color: #acece6;
+}
+.skill-row .skill-column .progress .html {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #1F585C;
+  width: 62%;
+}
+.skill-row .skill-column .progress .css {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #1F585C;
+  width: 50%;
+}
+.skill-row .skill-column .progress .bootstrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #1F585C;
+  width: 48%;
+}
+.skill-row .skill-column .progress .javascript {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #1F585C;
+  width: 10%;
+}
+.skill-row .skill-column .progress .adobe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #1F585C;
+  width: 75%;
+}
+.skill-row .skill-column .progress .git {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #1F585C;
+  width: 10%;
 }
