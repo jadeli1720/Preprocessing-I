@@ -59,14 +59,17 @@ html, body {
 
 // variables:
 
-@primary:#02c2ae;
+@primary:#40b6be;
 @second: #f77f4c;
 @third:#662d4e;
-@darkTeal: #1F585C;
+@lightpurple: #C1AFC6;
+@darkTeal: #245864;
 @darkOrange: #f0683e;
 @shadow: 1px 3px 8px 1px rgba(0,0,0,0.75);
-@blurred: 0px 5px 20px 0px rgba(0,0,0,0.2);
+@blurred: 0px 5px 20px 0px rgba(0,0,0,0.5);
 @transition: all 0.5s ease-in-out;
+@upperCase: uppercase;
+@mobile: ~"(max-width: 500px)";
 
 // Mixins
 
@@ -105,6 +108,9 @@ html, body {
 	        transition: @transition; 
 }
 
+.uppercase {
+	text-transform: uppercase;
+}
 
 // General Styling
 
@@ -137,6 +143,7 @@ p {
 	padding: 40px;
 	.rounded-borders();
 	.blurry-shadows();
+	background-color: white;
 }
 
 .title {
@@ -146,13 +153,46 @@ p {
 }
 
 .button-style{
-	background:@second;
+	background:@primary;
+	background-image: linear-gradient(to top, #245864, #2a6e7b, #318592, #389da8, #40b6be);
 	border: none;
+	color: white;
+	font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
 	.rounded-borders();
 	width: 140px;
 	height: 40px;
 	.shadow();
+	.transition();
+	.uppercase();
+	
 }
+
+.button-style:hover{
+	background: @darkTeal;
+	background-image: linear-gradient(to bottom, #245864, #2a6e7b, #318592, #389da8, #40b6be);
+}
+
+.button-header-style {
+	background:@third;
+	background-image: linear-gradient(to top, #662d4e, #7c4d6c, #926d8b, #a98ea9, #c1afc6);
+	border: none;
+	color: white;
+	font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+	.rounded-borders();
+	width: 140px;
+	height: 40px;
+	.shadow();
+	.transition();
+	.uppercase();
+}
+
+.button-header-style:hover{
+	color: black;
+	background: @lightpurple;
+	background-image: linear-gradient(to bottom, #662d4e, #7c4d6c, #926d8b, #a98ea9, #c1afc6);
+}
+
+
 
 
 .bold{
@@ -166,13 +206,15 @@ p {
 	width:100%;
 }
 
-
 // navigational styling
 nav {
-	background-color:@primary;
+	background: url(../images/teal-banner_b.png);
+	background-color: @primary;
+	background-blend-mode: multiply;
 	font-size: 2rem;
 	margin: 0 0  40px;
 	padding: 30px 80px;
+	.shadow();
 	position: fixed;
 	top: 0%;
 	height: 100px;
@@ -186,33 +228,32 @@ nav {
 			padding: 0 50px;
 			
 			a{	
-				color: black;
+				color: white;
+				font-weight: 700;
 				text-decoration: none;
 				.transition();
-			}
 
-			a:hover{
-				color: white;
+				&:hover{
+					color:fadeout(white, 50%);
+				}
 			}
-
 		}
-
 	}
 }
 
 
 main {
+	background-color: @lightpurple;
+	background-image: linear-gradient(to top, #7b5b81, #9d84a3, #c1afc6);
 	margin-top: 100px;
 }
 
 // header styling
 
 .banner {
-	background-color: @third;
-	background-image: url("/images/teal-banner.png");
-	background-position: 0% 0%;
-	background-repeat:no-repeat;
-	background-size:cover;
+	// background-image: linear-gradient(to top, #33125e, #004289, #006aa6, #0091b5, #40b6be);
+	background-image: linear-gradient(to top, #245864, #2a6e7b, #318592, #389da8, #40b6be);
+	background-color: @primary;
 	height: 640px;
 	width: 100vw;
 	padding: 60px 0;
@@ -229,7 +270,7 @@ main {
 		img {
 			width: 260px;
 			height: 25%;
-			border: 5px solid @second;
+			border: 5px solid @third;
 			border-radius: 50%;
 		}
 
@@ -358,11 +399,7 @@ main {
 	}
 }
 
-// .custom-layout(@j @a) {
-// 	display: flex;
-// 	justify-content: @j;
-// 	align-items: @a;
-// }
+
 
 // Portfolio
 
@@ -371,6 +408,7 @@ main {
 	justify-content: space-around;
 
 	.portfolio-cards {
+		background-color:white;
 		.blurry-shadows();
 		.rounded-borders();
 		.custom-layout(center, center);
