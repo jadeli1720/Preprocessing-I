@@ -198,6 +198,7 @@ p {
   justify-content: center;
   align-items: center;
   margin-top: 140px;
+  margin-bottom: 40px;
 }
 .button-style {
   background: #f77f4c;
@@ -216,7 +217,8 @@ p {
 }
 .container {
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
 }
 nav {
   background-color: #02c2ae;
@@ -270,8 +272,8 @@ main {
   justify-content: center;
 }
 .banner .header-img img {
-  width: 8%;
-  height: 95%;
+  width: 260px;
+  height: 25%;
   border: 5px solid #f77f4c;
   border-radius: 50%;
 }
@@ -301,9 +303,6 @@ main {
 }
 .about-row .about-column {
   width: 48%;
-}
-.about-row .about-column h1 {
-  margin-bottom: 30px;
 }
 .about-row .about-column .info-row {
   display: flex;
@@ -380,4 +379,40 @@ main {
   bottom: 0;
   background-color: #1F585C;
   width: 10%;
+}
+.portfolio-row {
+  display: flex;
+  justify-content: space-around;
+}
+.portfolio-row .portfolio-cards {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  width: 100%;
+}
+.portfolio-row .portfolio-cards img {
+  border-bottom-style: solid;
+  border-bottom-color: #662d4e;
+  border-bottom-width: 3px;
+}
+.portfolio-row .portfolio-cards h3 {
+  font-size: 2.6rem;
+  margin: 40px 0 20px;
+}
+.portfolio-row .portfolio-cards button {
+  margin: 20px 0 60px;
+}
+.portfolio-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 60px 0 40px;
 }

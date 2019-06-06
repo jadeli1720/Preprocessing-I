@@ -142,6 +142,7 @@ p {
 .title {
 	.custom-layout(center, center);
 	margin-top: 140px;
+	margin-bottom: 40px;
 }
 
 .button-style{
@@ -161,7 +162,8 @@ p {
 
 .container {
 	margin: 0 auto;
-	width: 1200px;
+	max-width: 1200px;
+	width:100%;
 }
 
 
@@ -225,8 +227,8 @@ main {
 		
 	
 		img {
-			width: 8%;
-			height: 95%;
+			width: 260px;
+			height: 25%;
 			border: 5px solid @second;
 			border-radius: 50%;
 		}
@@ -263,10 +265,7 @@ main {
 	
 	.about-column {
 		width: 48%;
-		
-		h1{
-			margin-bottom: 30px;
-		}
+
 		.info-row {
 			.custom-layout(space-between, flex-start);
 
@@ -280,12 +279,6 @@ main {
 	}
 }
 
-
-// .custom-layout(@j @a) {
-// 	display: flex;
-// 	justify-content: @j;
-// 	align-items: @a;
-// }
 
 //Skills Section
 
@@ -363,4 +356,49 @@ main {
 
 		}
 	}
+}
+
+// .custom-layout(@j @a) {
+// 	display: flex;
+// 	justify-content: @j;
+// 	align-items: @a;
+// }
+
+// Portfolio
+
+.portfolio-row {
+	display:flex;
+	justify-content: space-around;
+
+	.portfolio-cards {
+		.blurry-shadows();
+		.rounded-borders();
+		.custom-layout(center, center);
+		flex-direction: column;
+		margin: 20px;
+		width: 100%;
+		
+		img{
+			border-bottom-style: solid;
+			border-bottom-color: @third;
+			border-bottom-width: 3px;
+		}
+
+		h3{
+			// text-align: center;
+			font-size: 2.6rem;
+			margin: 40px 0 20px;
+		}
+
+		button{
+			margin: 20px 0 60px;
+		}
+	}
+}
+
+.portfolio-button {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 60px 0 40px;
 }
