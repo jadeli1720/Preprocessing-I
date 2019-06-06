@@ -62,9 +62,20 @@ html, body {
 @primary:#02c2ae;
 @second: #f77f4c;
 @third:#662d4e;
+@darkTeal: #1F585C;
+@darkOrange: #f0683e;
 @shadow: 1px 3px 8px 1px rgba(0,0,0,0.75);
+@blurred: 0px 5px 20px 0px rgba(0,0,0,0.2);
+@transition: all 0.5s ease-in-out;
 
 // Mixins
+
+// The @a and @j are arguments
+.custom-layout(@j, @a) {
+	display: flex;
+	justify-content: @j;
+	align-items: @a;
+}
 
 .shadow{
 	 -webkit-box-shadow: @shadow;
@@ -74,10 +85,24 @@ html, body {
 	        box-shadow: @shadow;
 }
 
-.transitions{
-
+.blurry-shadows {
+	-webkit-box-shadow: @blurred;
+	-moz-box-shadow: @blurred;
+	-ms-box-shadow: @blurred;
+	 -o-box-shadow: @blurred;
+		box-shadow: @blurred;
 }
 
+.rounded-borders{
+	border-radius: 5px;
+}
+
+.transition {
+	-webkit-transition: @transition;  
+	-moz-transition:    @transition;
+	-ms-transition:     @transition; 
+	-o-transition:      @transition;  
+}
 
 
 // General Styling
@@ -86,11 +111,11 @@ html {
 	box-sizing: border-box;
 	font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
 	font-size: 62.5%; 
-  }
+}
   
   *, *:before, *:after {
 	box-sizing: inherit;
-  }
+}
 
   h1, h2, h3, h4, h5 {
 	font-weight: 600;
@@ -98,23 +123,46 @@ html {
 
   h1 {
 	font-size: 3.6rem;
-	
-  }
+}
 
-  p {
-	  font-family: 'Raleway', "Helvetica Neue", Arial, sans-serif;
-	  font-size: 1.6rem;
-  }
+p {
+	font-family: 'Raleway', "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.6rem;
+	line-height: 26px;
+}
 
-  .button-style{
-	  background:@second;
-	  border: none;
-	  border-radius: 5px;
-	  width: 140px;
-	  height: 40px;
-	  .shadow();
-  }
-  
+
+section {
+	margin-top: 60px;
+}
+
+.card{
+	margin: 10px;
+	padding: 40px;
+	.rounded-borders();
+	.blurry-shadows();
+}
+
+.title {
+	.custom-layout(center, center);
+	padding: 30px 0 50px;
+}
+
+.button-style{
+	background:@second;
+	border: none;
+	.rounded-borders();
+	width: 140px;
+	height: 40px;
+	.shadow();
+}
+
+
+.bold{
+	font-weight: 800;
+}
+
+
 .container {
 	margin: 0 auto;
 	width: 1200px;
@@ -126,26 +174,25 @@ nav {
 	background-color:@primary;
 	font-size: 2rem;
 	margin: 0 0  40px;
-	padding: 30px 15px;
+	padding: 30px 80px;
 	position: fixed;
 	top: 0%;
 	height: 100px;
-	width: 1000px;
+	width: 100vw;
 	z-index: 1;
 
 	.nav-list{
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
+		.custom-layout(space-around, center);
 
 		li{
 			padding: 0 50px;
 			
-
 			a{	
 				color: black;
 				text-decoration: none;
+				.transition();
 			}
+
 		}
 
 	}
@@ -154,21 +201,23 @@ nav {
 
 main {
 	margin-top: 100px;
-	width: 1000px;
 }
 
 // header styling
 
 .banner {
+	background-color: @third;
 	background-image: url("/images/teal-banner.png");
 	background-position: 0% 0%;
 	background-repeat:no-repeat;
 	background-size:cover;
-	height: 550px;
-	width: 100%;
+	height: 640px;
+	width: 100vw;
+	padding: 60px 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
 
 	.header-img{
 		display: flex;
@@ -176,8 +225,8 @@ main {
 		
 	
 		img {
-			width: 20%;
-			height: 100%;
+			width: 8%;
+			height: 95%;
 			border: 5px solid @second;
 			border-radius: 50%;
 		}
@@ -187,25 +236,63 @@ main {
 	.header-info {
 		margin-top: 20px;
 		text-align: center;
-		width: 1000px;
+
 
 		h1 {
 			font-size: 50px;
 		}
 
 		h3{
-			margin: 20px 0;
+			margin: 10px 0;
 			font-size: 32px;
 		}
 	}
 	.header-buttons {
-		display: flex;
-		justify-content: center;
+		.custom-layout(center, center);
 
 		button{
-			margin: 10px;
+			margin: 20px;
+		}
+	}
+}
+
+// About Section
+
+.about-row{
+	.custom-layout(space-between, flex-start);
+	
+	.about-column {
+		width: 48%;
+		
+		h1{
+			margin-bottom: 30px;
+		}
+		.info-row {
+			.custom-layout(space-between, flex-start);
+
+			.info-column {
+				
+				p{
+					padding: 10px 0;
+				}
+			}
 		}
 	}
 }
 
 
+// .custom-layout(@j @a) {
+// 	display: flex;
+// 	justify-content: @j;
+// 	align-items: @a;
+// }
+
+//Skills Section
+
+.skill-row{
+	.custom-layout(space-between, flex-start);
+
+	.skill-column {
+		width: 48%;
+	}
+}

@@ -17,25 +17,27 @@
 </head>
 
 <body>
-  <div class="container" id="top">
+  <div id="top">
     <nav>
-      <ul class="nav-list">
-        <li><a href="#top">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+      <div class="container">
+          <ul class="nav-list">
+              <li><a href="#top">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+      </div>
     <main>
-      <header class="banner">
+      <header class="banner container">
         <div class="header-img">
           <img src="images/headshot.png" alt="">
         </div>
         <div class="header-info">
-            <h1>Jade Lopez</h1>
-            <h3>Web Developer, Graphic Designer</h3>
+          <h1>Jade Lopez</h1>
+          <h3>Web Developer, Graphic Designer</h3>
         </div>
         <div class="header-buttons">
           <button class="button-style">Hire Me</button>
@@ -45,34 +47,30 @@
       <article>
 
         <!-- About Section -->
-        <section class="about-section" id="about">
+        <section class="container" id="about">
           <div class="card">
             <div class="about-row">
               <div class="about-column">
                 <h1>About</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et
-                  dolore magna aliqua. Mollis aliquam ut porttitor leo a diam. Maecenas sed enim ut sem viverra. Ac
-                  tortor
-                  vitae purus faucibus ornare. Eget duis at tellus at. Ultricies lacus sed turpis tincidunt id aliquet
-                  risus feugiat. Ultrices in iaculis nunc sed. Libero enim sed faucibus turpis in eu mi bibendum.
-                  Aliquet
-                  porttitor lacus luctus accumsan tortor.</p>
+                  et dolore magna aliqua. Amet risus nullam eget felis. Morbi enim nunc faucibus a pellentesque sit amet
+                  porttitor. Nisl condimentum id venenatis a condimentum vitae sapien pellentesque. Egestas congue
+                  quisque egestas diam in. Condimentum lacinia quis vel eros donec. </p>
               </div>
               <div class="about-column">
                 <h1>Basic Information</h1>
                 <div class="info-row">
-                  <div class="info-column">
-                    <p>Age:</p>
-                    <p>Email:</p>
-                    <p>Phone:</p>
-                    <p>Address:</p>
+                  <div class="info-column" >
+                    <p class="bold">Age:</p>
+                    <p class="bold">Email:</p>
+                    <p class="bold">Phone:</p>
+                    <p class="bold">Address:</p>
                   </div>
                   <div class="info-column">
-                    <p>00</p>
-                    <p>myname@gmail.com</p>
-                    <p>(123)456-9870</p>
-                    <p>3210 Street Name, City, State, Zip</p>
+                    <p>36</p>
+                    <p>jadeli1720@gmail.com</p>
+                    <p>(909) 379-4021</p>
+                    <p>3379 Reindeer Circle, Colorado Springs, <br> CO 80922</p>
                   </div>
                 </div>
               </div>
@@ -81,9 +79,10 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills">
-          <h1>Professional Skills</h1>
-
+        <section class="container" id="skills">
+          <div class="title">
+              <h1>Professional Skills</h1>
+          </div>
           <div class="card">
             <div class="skill-row">
               <div class="skill-column">
@@ -151,9 +150,11 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects">
-          <h1>Portfolio</h1>
-
+        <section  class="container" id="projects">
+          <div class="title">
+              <h1>Portfolio</h1>
+          </div>
+          
           <div class="projects-row">
             <div class="project-cards">
               <img src="images/landingPage.png" alt="Free codecademy Landing page project" />
@@ -187,9 +188,11 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience">
+        <section class="container" id="experience">
           <section class="work">
-            <h1>Work Experience</h1>
+            <div class="title">
+                <h1>Work Experience</h1>
+            </div>
             <div class="card">
               <div class="exper-row">
                 <div class="left-column">
@@ -242,7 +245,9 @@
           </section>
 
           <section class="education">
-            <h1>School Experience</h1>
+            <div class="title">
+                <h1>School Experience</h1>
+            </div>
             <div class="card">
               <div class="exper-row">
                 <div class="left-column">
@@ -298,7 +303,9 @@
         <!-- contact form -->
         <section id="contact">
           <div class="card">
-            <h1>Contact Me</h1>
+            <div class="title">
+                <h1>Contact Me</h1>
+            </div>
             <form action="">
               <div class="form-row">
                 <div class="form-column">
@@ -306,22 +313,22 @@
                   <input type="text" name="name" id="name" class="field" placeholder="John Doe">
                 </div>
                 <div class="form-column">
-                    <label for="name" class="form-label">Email:</label>
-                    <input type="text" name="email" id="email" class="field" placeholder="youremail@here">
+                  <label for="name" class="form-label">Email:</label>
+                  <input type="text" name="email" id="email" class="field" placeholder="youremail@here">
                 </div>
               </div>
               <div class="form-row">
-                  <div class="form-column">
-                    <label for="name" class="form-label">Phone Number:</label>
-                    <input type="text" name="phone" id="phone" class="field" placeholder="(123)-456-7890">
-                  </div>
-                  <div class="form-column">
-                      <label for="name" class="form-label">Subject:</label>
-                      <input type="text" name="subject" id="subject" class="subject" placeholder="Subject">
-                  </div>
+                <div class="form-column">
+                  <label for="name" class="form-label">Phone Number:</label>
+                  <input type="text" name="phone" id="phone" class="field" placeholder="(123)-456-7890">
                 </div>
-                <label for="" class="form-label"Message</label>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message here..."></textarea>
+                <div class="form-column">
+                  <label for="name" class="form-label">Subject:</label>
+                  <input type="text" name="subject" id="subject" class="subject" placeholder="Subject">
+                </div>
+              </div>
+              <label for="" class="form-label" Message</label> <textarea name="message" id="message" cols="30" rows="10"
+                placeholder="Your message here..."></textarea>
             </form>
           </div>
         </section>
