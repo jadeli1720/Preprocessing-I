@@ -59,20 +59,31 @@ html, body {
 
 // variables:
 
+// colors
 @primary:#40b6be;
 @second: #f77f4c;
 @third:#662d4e;
 @lightpurple: #C1AFC6;
 @darkTeal: #245864;
 @darkOrange: #f0683e;
+
+//Gradients
+@purple-orange-grade:linear-gradient(to top, #f77f4c 10%, #db6156, #b84b5a, #8f3a58, #662d4e 80%);
+
+// shadows
 @shadow: 1px 3px 8px 1px rgba(0,0,0,0.75);
 @blurred: 0px 5px 20px 0px rgba(0,0,0,0.5);
+
+
 @transition: all 0.5s ease-in-out;
 @upperCase: uppercase;
-@mobile: ~"(max-width: 500px)";
+
+// Mobile
+@mobile: ~"(max-width:500px)";
+
+
 
 // Mixins
-
 // The @a and @j are arguments
 .custom-layout(@j, @a) {
 	display: flex;
@@ -110,6 +121,10 @@ html, body {
 
 .uppercase {
 	text-transform: uppercase;
+}
+
+.gradients(@grade) {
+	background-image: @grade
 }
 
 // General Styling
@@ -172,6 +187,8 @@ p {
 	background-image: linear-gradient(to bottom, #245864, #2a6e7b, #318592, #389da8, #40b6be);
 }
 
+// need to clean up bellow
+
 .button-header-style {
 	background:@third;
 	background-image: linear-gradient(to top, #662d4e, #7c4d6c, #926d8b, #a98ea9, #c1afc6);
@@ -191,8 +208,6 @@ p {
 	background: @lightpurple;
 	background-image: linear-gradient(to bottom, #662d4e, #7c4d6c, #926d8b, #a98ea9, #c1afc6);
 }
-
-
 
 
 .bold{
@@ -220,22 +235,23 @@ nav {
 	height: 100px;
 	width: 100vw;
 	z-index: 1;
+	
+}
 
-	.nav-list{
-		.custom-layout(space-around, center);
+.nav-list{
+	.custom-layout(space-around, center);
 
-		li{
-			padding: 0 50px;
-			
-			a{	
-				color: white;
-				font-weight: 700;
-				text-decoration: none;
-				.transition();
+	li{
+		padding: 0 50px;
+		
+		a{	
+			color: white;
+			font-weight: 700;
+			text-decoration: none;
+			.transition();
 
-				&:hover{
-					color:fadeout(white, 50%);
-				}
+			&:hover{
+				color:fadeout(white, 50%);
 			}
 		}
 	}
@@ -244,15 +260,14 @@ nav {
 
 main {
 	background-color: @lightpurple;
-	background-image: linear-gradient(to top, #7b5b81, #9d84a3, #c1afc6);
+	.gradients(@purple-orange-grade);
 	margin-top: 100px;
 }
 
 // header styling
 
 .banner {
-	// background-image: linear-gradient(to top, #33125e, #004289, #006aa6, #0091b5, #40b6be);
-	background-image: linear-gradient(to top, #245864, #2a6e7b, #318592, #389da8, #40b6be);
+	background-image: linear-gradient(to top, #08364e, #0f536d, #18738a, #2894a5 40%, #40b6be 65%);
 	background-color: @primary;
 	height: 640px;
 	width: 100vw;
@@ -304,17 +319,18 @@ main {
 .about-row{
 	.custom-layout(space-between, flex-start);
 	
-	.about-column {
-		width: 48%;
+}
 
-		.info-row {
-			.custom-layout(space-between, flex-start);
+.about-column {
+	width: 48%;
 
-			.info-column {
-				
-				p{
-					padding: 10px 0;
-				}
+	.info-row {
+		.custom-layout(space-between, flex-start);
+
+		.info-column {
+			
+			p{
+				padding: 10px 0;
 			}
 		}
 	}
@@ -339,64 +355,64 @@ main {
 				font-size: 2.4rem;
 			}
 		}
-
-		.progress{
-			position: relative;
-			height: 12px;
-			display: block;
-			width: 100%;
-			background-color: #acece6;
-
-			.html {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				background-color: @darkTeal;
-				width: 62%;
-			}
-
-			.css {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				background-color: @darkTeal;
-				width: 50%;
-			}
-
-			.bootstrap {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				background-color: @darkTeal;
-				width: 48%;
-			}
-
-			.javascript {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				background-color: @darkTeal;
-				width: 10%;
-			}
-
-			.adobe {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				background-color: @darkTeal;
-				width: 75%;
-			}
-
-			.git {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				background-color: @darkTeal;
-				width: 10%;
-			}
-
-		}
 	}
+}
+
+.progress{
+	position: relative;
+	height: 12px;
+	display: block;
+	width: 100%;
+	background-color: #acece6;
+
+	.html {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		background-color: @darkTeal;
+		width: 62%;
+	}
+
+	.css {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		background-color: @darkTeal;
+		width: 50%;
+	}
+
+	.bootstrap {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		background-color: @darkTeal;
+		width: 48%;
+	}
+
+	.javascript {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		background-color: @darkTeal;
+		width: 10%;
+	}
+
+	.adobe {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		background-color: @darkTeal;
+		width: 75%;
+	}
+
+	.git {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		background-color: @darkTeal;
+		width: 10%;
+	}
+
 }
 
 

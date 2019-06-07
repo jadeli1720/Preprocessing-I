@@ -281,15 +281,15 @@ nav {
   width: 100vw;
   z-index: 1;
 }
-nav .nav-list {
+.nav-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-nav .nav-list li {
+.nav-list li {
   padding: 0 50px;
 }
-nav .nav-list li a {
+.nav-list li a {
   color: white;
   font-weight: 700;
   text-decoration: none;
@@ -299,16 +299,16 @@ nav .nav-list li a {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-nav .nav-list li a:hover {
+.nav-list li a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 main {
   background-color: #C1AFC6;
-  background-image: linear-gradient(to top, #7b5b81, #9d84a3, #c1afc6);
+  background-image: linear-gradient(to top, #f77f4c 10%, #db6156, #b84b5a, #8f3a58, #662d4e 80%);
   margin-top: 100px;
 }
 .banner {
-  background-image: linear-gradient(to top, #245864, #2a6e7b, #318592, #389da8, #40b6be);
+  background-image: linear-gradient(to top, #08364e, #0f536d, #18738a, #2894a5 40%, #40b6be 65%);
   background-color: #40b6be;
   height: 640px;
   width: 100vw;
@@ -351,15 +351,15 @@ main {
   justify-content: space-between;
   align-items: flex-start;
 }
-.about-row .about-column {
+.about-column {
   width: 48%;
 }
-.about-row .about-column .info-row {
+.about-column .info-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.about-row .about-column .info-row .info-column p {
+.about-column .info-row .info-column p {
   padding: 10px 0;
 }
 .skill-row {
@@ -381,49 +381,49 @@ main {
 .skill-row .skill-column .skill-header p {
   font-size: 2.4rem;
 }
-.skill-row .skill-column .progress {
+.progress {
   position: relative;
   height: 12px;
   display: block;
   width: 100%;
   background-color: #acece6;
 }
-.skill-row .skill-column .progress .html {
+.progress .html {
   position: absolute;
   top: 0;
   bottom: 0;
   background-color: #245864;
   width: 62%;
 }
-.skill-row .skill-column .progress .css {
+.progress .css {
   position: absolute;
   top: 0;
   bottom: 0;
   background-color: #245864;
   width: 50%;
 }
-.skill-row .skill-column .progress .bootstrap {
+.progress .bootstrap {
   position: absolute;
   top: 0;
   bottom: 0;
   background-color: #245864;
   width: 48%;
 }
-.skill-row .skill-column .progress .javascript {
+.progress .javascript {
   position: absolute;
   top: 0;
   bottom: 0;
   background-color: #245864;
   width: 10%;
 }
-.skill-row .skill-column .progress .adobe {
+.progress .adobe {
   position: absolute;
   top: 0;
   bottom: 0;
   background-color: #245864;
   width: 75%;
 }
-.skill-row .skill-column .progress .git {
+.progress .git {
   position: absolute;
   top: 0;
   bottom: 0;
