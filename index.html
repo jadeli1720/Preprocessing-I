@@ -1,19 +1,328 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-
-  <title>My Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Jade Lopez Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
-<body>
-  <h1>My Resume</h1>
+<body id="top">
+  <div>
+    <nav>
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+  </div>
+  <main>
+    <header class="banner">
+      <div class="container">
+        <div class="header-img">
+          <img src="images/headshot.png" alt="">
+        </div>
+        <div class="header-info">
+          <h1>Jade Lopez</h1>
+          <h3>Web Developer, Graphic Designer</h3>
+        </div>
+        <div class="header-buttons">
+          <button class="button-header-style">Hire Me</button>
+          <button class="button-header-style">Resume</button>
+        </div>
+      </div>
+
+    </header>
+    <article>
+
+      <!-- About Section -->
+      <section class="container" id="about">
+        <div class="card">
+          <div class="about-row">
+            <div class="about-column">
+              <h1>About</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Amet risus nullam eget felis. Morbi enim nunc faucibus a pellentesque sit amet
+                porttitor. Nisl condimentum id venenatis a condimentum vitae sapien pellentesque. Egestas congue
+                quisque egestas diam in. Condimentum lacinia quis vel eros donec. </p>
+            </div>
+            <div class="about-column">
+              <h1>Basic Information</h1>
+              <div class="info-row">
+                <div class="info-column">
+                  <p class="bold">Age:</p>
+                  <p class="bold">Email:</p>
+                  <p class="bold">Phone:</p>
+                  <p class="bold">Address:</p>
+                </div>
+                <div class="info-column">
+                  <p>36</p>
+                  <p>jadeli1720@gmail.com</p>
+                  <p>(909) 379-4021</p>
+                  <p>3379 Reindeer Circle, Colorado Springs, <br> CO 80922</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="container" id="skills">
+        <div class="title white">
+          <h1>Professional Skills</h1>
+        </div>
+        <div class="card">
+          <div class="skill-row">
+            <div class="skill-column">
+              <div class="skill-header">
+                <p>HTML</p>
+                <p>62%</p>
+              </div>
+              <div class="progress">
+                <div class="html"></div>
+              </div>
+            </div>
+            <div class="skill-column">
+              <div class="skill-header">
+                <p>CSS</p>
+                <p>50%</p>
+              </div>
+              <div class="progress">
+                <div class="css"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-column">
+              <div class="skill-header">
+                <p>Boostrap</p>
+                <p>48%</p>
+              </div>
+              <div class="progress">
+                <div class="bootstrap"></div>
+              </div>
+            </div>
+            <div class="skill-column">
+              <div class="skill-header">
+                <p>Javascript</p>
+                <p>10%</p>
+              </div>
+              <div class="progress">
+                <div class="javascript"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-column">
+              <div class="skill-header">
+                <p>Adobe Suite</p>
+                <p>75%</p>
+              </div>
+              <div class="progress">
+                <div class="adobe"></div>
+              </div>
+            </div>
+            <div class="skill-column">
+              <div class="skill-header">
+                <p>Git</p>
+                <p>10%</p>
+              </div>
+              <div class="progress">
+                <div class="git"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="container" id="portfolio">
+        <div class="title white">
+          <h1>Portfolio</h1>
+        </div>
+
+        <div class="portfolio-row">
+          <div class="portfolio-cards">
+            <img src="images/landingPage.png" alt="Free codecademy Landing page project" />
+            <h3>Project Title</h3>
+            <button class="button-style">Learn More</button>
+          </div>
+
+          <div class="portfolio-cards">
+            <img src="images/5150whips.png" alt="5150Whips Web Page" />
+            <h3>Project Title</h3>
+            <button class="button-style">Learn More</button>
+          </div>
+        </div>
+
+        <div class="portfolio-row">
+          <div class="portfolio-cards">
+            <img src="images/surveyForm.png" alt="Survey form picture from codepen." />
+            <h3>Project Title</h3>
+            <button class="button-style">Learn More</button>
+          </div>
+          <div class="portfolio-cards">
+            <img src="images/responsiveDesign.png" alt="Responsive Website Desing Project" />
+            <h3>Project Title</h3>
+            <button class="button-style">Learn More</button>
+          </div>
+        </div>
+
+        <div class="portfolio-button">
+          <button class="button-style">See More</button>
+        </div>
+
+      </section>
+
+      <!-- Experience Section -->
+      <section class="container" id="experience">
+        <section class="work">
+          <div class="title white">
+            <h1>Work Experience</h1>
+          </div>
+          <div class="exper-row">
+            <div class="grid-col left">
+              <h3>5150Whips</h3>
+              <p>September 2018</p>
+            </div>
+            <div class=" grid-col right">
+              <h3>Web Developer & Designer</h3>
+              <p>Hired by 5150 whips to fix, maintain, and make updates to the current website. Currently working
+                with owner to create a new website which I will be updating and maintaining when completed.</p>
+            </div>
+          </div>
+
+          <div class="exper-row">
+            <div class="grid-col  left">
+              <h3>Cryptocurrency</h3>
+              <p>Nov 2017 - Jan 2018</p>
+            </div>
+            <div class="grid-col right">
+              <h3>Graphic Designer</h3>
+              <p>Designed a cover for a company booklet presentation explaining cryptocurrency, mining cryptocurrency,
+                and how to build and operate a cryptocurrency mining.</p>
+            </div>
+          </div>
+
+          <div class="exper-row">
+            <div class="grid-col left">
+              <h3>12am Miscreants</h3>
+              <p>Month, ##, ####</p>
+            </div>
+            <div class="grid-col right">
+              <h3>Graphic Designer</h3>
+              <p>Hired to create a logo and branding for a "Let's Play" style YouTube page called 12am Miscreants.
+                Designed a central logo to be used in all collateral materials and combined it with thier YouTube banned
+                I designed as well.
+            </div>
+          </div>
+        </section>
+
+        <section class="education">
+          <div class="edu-title white">
+            <h1>School Experience</h1>
+          </div>
+          <div class="exper-row">
+            <div class="grid-col left">
+              <h3>2019 - Present</h3>
+            </div>
+            <div class="grid-col right">
+              <h3>Lambda School</h3>
+              <p>Full Stack Web Developer</p>
+            </div>
+          </div>
+
+          <div class="exper-row">
+            <div class="grid-col left">
+              <h3>2016 - 2019</h3>
+            </div>
+            <div class="grid-col right">
+              <h3>Foothill Colege</h3>
+              <p>AA in Graphic &amp; Interactive Design</p>
+            </div>
+          </div>
+
+          <div class="exper-row">
+            <div class="grid-col left">
+              <h3>2007 - 2010</h3>
+            </div>
+            <div class="grid-col right">
+              <h3>San Francisco State University</h3>
+              <p>Music - Vocal Performance in Opera</p>
+            </div>
+          </div>
+
+          <div class="exper-row">
+            <div class="grid-col left">
+              <h3>2001 - 2007</h3>
+            </div>
+            <div class="grid-col right">
+              <h3>Riverside Community College</h3>
+              <p>Associate in Science</p>
+            </div>
+          </div>
+
+          <div class="exper-row">
+            <div class="grid-col left">
+              <h3>1997 - 2001</h3>
+            </div>
+            <div class="grid-col right">
+              <h3>Redlands East Valley Highschool</h3>
+              <p>Highschool Diploma</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- contact form -->
+      <section id="contact">
+        <div class="container card form-container">
+          <h1>Contact Me</h1>
+          <form class="form">
+            <ul class="form-wrapper">
+              <li class="form-row">
+                <label for="name" class="white">Name:</label>
+                <input type="text" id="name" placeholder="Your name...">
+              </li>
+              <li class="form-row">
+                <label for="email" class="white">E-mail:</label>
+                <input type="text" id="email" placeholder="example@exapmle.com">
+              </li>
+              <li class="form-row">
+                <label for="number" class="white">Phone:</label>
+                <input type="text" id="number" placeholder="(123)-456-7890">
+              </li>
+              <li class="form-row">
+                <label for="message" class="white">Message:</label>
+                <textarea type="type" rows="6" id="message" placeholder="Your message..."></textarea>
+              </li>
+            </ul>
+            <button type="button" value="Submit" class="button-header-style">Submit</button>
+          </form>
+        </div>
+      </section>
+    </article>
+    <footer></footer>
+  </main>
+  </div>
+  <!-- end container -->
 </body>
+
 </html>
